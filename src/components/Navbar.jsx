@@ -1,22 +1,30 @@
+import { Link } from "react-router-dom";
+
 function Navbar() {
   return (
     <nav className="navbar">
-
-      {/* LEFT */}
       <div className="nav-left">
-        <img src="../assets/logo3.png" className="nav-logo" />
+        <img src="/logo3.png" className="nav-logo" alt="logo" /> {/* ✅ */}
         <h2>CrunchKart</h2>
       </div>
 
-      {/* RIGHT */}
       <ul>
-        <li><button onClick={() => showSection('home')}>Home</button></li>
-        <li><button onClick={() => showSection('about')}>About</button></li>
-        <li><button onClick={() => showSection('products')}>Products</button></li>
-        <li><button onClick={() => showSection('services')}>Services</button></li>
-        <li><button onClick={() => showSection('contact')}>Contact</button></li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+        <li>
+          <Link to="/products">Products</Link>
+        </li>
+        <li>
+          <Link to="/services">Services</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
-
     </nav>
   );
 }

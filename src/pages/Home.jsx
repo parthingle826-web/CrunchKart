@@ -1,17 +1,16 @@
+<img src="/bananawafer.jpg" alt="Banana Chips" />;
 function Home() {
   return (
     <section id="home">
-
       {/* 🌟 Hero Section */}
       <div className="hero">
-
         {/* LEFT SIDE */}
         <div className="hero-text">
           <h1>Welcome to CrunchKart</h1>
           <p>Fresh • Crispy • Delicious Banana Chips</p>
 
           <p>
-            Experience the authentic taste of premium banana wafers made from 
+            Experience the authentic taste of premium banana wafers made from
             handpicked bananas. Perfect crunch in every bite!
           </p>
 
@@ -22,16 +21,15 @@ function Home() {
         <div className="hero-image">
           <img src="/BananaWafer.jpg" alt="Banana Chips" />
         </div>
-
       </div>
 
       {/* 🍌 About Preview */}
       <div className="home-about">
         <h2>Why CrunchKart?</h2>
         <p>
-          At CrunchKart, we bring you the finest quality banana chips made from 
-          carefully selected fresh bananas. Our wafers are hygienically prepared, 
-          perfectly sliced, and fried to golden perfection.
+          At CrunchKart, we bring you the finest quality banana chips made from
+          carefully selected fresh bananas. Our wafers are hygienically
+          prepared, perfectly sliced, and fried to golden perfection.
         </p>
       </div>
 
@@ -78,7 +76,6 @@ function Home() {
         <h2>Craving Something Crunchy?</h2>
         <button>Contact Us</button>
       </div>
-
     </section>
   );
 }

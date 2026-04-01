@@ -1,5 +1,6 @@
 /* RESET */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   /* overflow: hidden; */
@@ -10,11 +11,41 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
 }
 
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-image img {
+  width: 400px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 50px;
+}
+
+.home-products {
+  display: flex;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.cta {
+  text-align: center;
+  margin-top: 50px;
+}
 /* 🌌 Loader */
-#loader {
+/* #loader {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -23,31 +54,44 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
+.splash-screen {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: black; /* ⭐ THIS WAS MISSING EFFECT */
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* 🌠 Canvas */
 #stars {
   position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 /* 🚀 Logo */
 .logo-container {
   position: relative;
-  text-align: center;
   z-index: 2;
+  color: white; /* otherwise text invisible */
 }
-
-
-
 #logo {
   width: 300px;
   transform: scale(0.1) translateZ(-1000px);
   opacity: 0;
   animation: zoomIn 2s ease-out forwards;
 }
-
+.logo {
+  width: 300px;
+  transform: scale(0.1) translateZ(-1000px);
+  opacity: 0;
+  animation: zoomIn 2s ease-out forwards;
+}
 /* ✨ Text */
 #brand-text {
   margin-top: 20px;
@@ -57,7 +101,9 @@ html, body {
   opacity: 0;
   animation: fadeText 2s ease-in-out forwards;
   animation-delay: 2s;
-  text-shadow: 0 0 10px #ffcc00, 0 0 20px orange;
+  text-shadow:
+    0 0 10px #ffcc00,
+    0 0 20px orange;
 }
 
 /* 🔥 Animations */
@@ -113,8 +159,7 @@ html, body {
 
 /* ✨ Glow */
 canvas {
-  filter: drop-shadow(0 0 2px white)
-          drop-shadow(0 0 5px white);
+  filter: drop-shadow(0 0 2px white) drop-shadow(0 0 5px white);
 }
 
 /* 🔵 Navbar */
@@ -136,7 +181,7 @@ canvas {
 /* LEFT SIDE */
 .nav-left {
   display: flex;
-   /* flex-direction: column;  */
+  /* flex-direction: column;  */
   align-items: center;
   gap: 10px;
 }
@@ -160,8 +205,14 @@ canvas {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.5); }
-  to { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 /* RIGHT MENU */
 .navbar ul {
@@ -181,16 +232,9 @@ canvas {
 }
 /* 📄 Sections */
 section {
-  height: 100vh;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-  overflow-y: auto;
-  padding-top: 80px;
+  padding: 100px 20px;
+  min-height: 100vh;
 }
-
 /* 🔒 Lock during loading */
 body.loading {
   overflow: hidden;
@@ -228,18 +272,11 @@ body.loading {
   cursor: pointer;
 }
 
-/* 🚫 Hide during loading */
-.navbar,
-.side-nav {
-  display: none;
-}
-
 /* ✅ Show after loading */
 body:not(.loading) .navbar,
 body:not(.loading) .side-nav {
   display: flex;
 }
-
 
 /* 🛒 Grid */
 .product-grid {

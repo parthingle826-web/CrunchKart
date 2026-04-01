@@ -19,14 +19,20 @@ export function startAnimation() {
     stars.push({
       x: Math.random() * canvas.width,
       y: Math.random() * canvas.height,
-      r: Math.random() * 2
+      r: Math.random() * 2,
     });
   }
-
   function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-    stars.forEach(s => {
+    stars.forEach((s) => {
+      s.y += 0.5; // ⭐ movement
+
+      if (s.y > canvas.height) {
+        s.y = 0;
+        s.x = Math.random() * canvas.width;
+      }
+
       ctx.beginPath();
       ctx.arc(s.x, s.y, s.r, 0, Math.PI * 2);
       ctx.fillStyle = "white";
