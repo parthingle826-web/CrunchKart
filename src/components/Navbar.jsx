@@ -5,7 +5,9 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-left">
         <img src="/logo3.png" className="nav-logo" alt="logo" /> {/* ✅ */}
-        <h2>CrunchKart</h2>
+         <h2 className="brand-name">CrunchKart</h2>
+        
+     
       </div>
 
       <ul>
@@ -24,9 +26,14 @@ function Navbar() {
         <li>
           <Link to="/contact">Contact</Link>
         </li>
+        <li>
+  <Link to="/cart">My Account</Link>
+</li>
       </ul>
     </nav>
   );
 }
+
+
 
 export default Navbar;

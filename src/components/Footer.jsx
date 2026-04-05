@@ -1,19 +1,51 @@
+import { Link } from "react-router-dom";
+import { FaInstagram, FaTelegram, FaEnvelope } from "react-icons/fa";
+
 function Footer() {
   return (
     <footer className="footer">
 
-      <h2>🍌 CrunchKart</h2>
-      <p>Fresh • Crispy • Delicious Banana Chips</p>
+      <div className="footer-container">
 
-      <div className="footer-links">
-        <button onClick={() => showSection('home')}>Home</button>
-        <button onClick={() => showSection('about')}>About</button>
-        <button onClick={() => showSection('products')}>Products</button>
-        <button onClick={() => showSection('services')}>Services</button>
-        <button onClick={() => showSection('contact')}>Contact</button>
+        {/* 🔹 LEFT - BRAND */}
+        <div className="footer-brand">
+          <img src="/logo3.png" alt="logo" className="footer-logo" />
+          <h2>CrunchKart</h2>
+          <p>Fresh • Crispy • Delicious Banana Chips</p>
+          <br /><p>Jaimala Nagar Lane No.01 Near SP Classes,Old Sangvi,Pune,411005.</p>
+        </div>
+
+        {/* 🔹 CENTER - QUICK LINKS */}
+        <div className="footer-links">
+          <h3>Quick Links</h3>
+
+          {/* ❌ remove showSection → ✅ use Link */}
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/products">Products</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/contact">Contact</Link>
+        </div>
+
+        {/* 🔹 RIGHT - CONTACT */}
+        <div className="footer-contact">
+          <h3>Connect</h3>
+
+          <div className="social-icons">
+            <a href="#"><FaInstagram /></a>
+            <a href="#"><FaTelegram /></a>
+            <a href="#"><FaEnvelope /></a>
+          </div>
+
+          
+        </div>
+
       </div>
 
-      <p>© 2026 CrunchKart. All Rights Reserved.</p>
+      {/* 🔻 BOTTOM */}
+      <div className="footer-bottom">
+        <p>© 2026 CrunchKart. All Rights Reserved.</p>
+      </div>
 
     </footer>
   );

@@ -1,83 +1,85 @@
+import { useNavigate } from "react-router-dom";
+
 function Services() {
+  const navigate = useNavigate();
+
   return (
     <section id="services">
 
-      {/* 🌟 Header */}
+      {/* Hero */}
       <div className="services-hero">
         <h1>Our Services</h1>
-        <p>Delivering Quality, Taste & Trust</p>
+        <p>Delivering Quality, Consistency and Trust</p>
       </div>
 
-      {/* 🛒 Services List */}
+      {/* Services Cards */}
       <div className="services-container">
 
         <div className="service-card">
-          <h3>🍌 Fresh Banana Chips Production</h3>
+          <h3>Fresh Production</h3>
           <p>
-            We manufacture high-quality banana chips using fresh, carefully 
-            selected bananas to ensure the best taste and crunch.
+            Premium banana chips made from carefully selected raw bananas 
+            with consistent taste and perfect crispiness.
           </p>
         </div>
 
         <div className="service-card">
-          <h3>📦 Bulk Orders</h3>
+          <h3>Bulk Orders</h3>
           <p>
-            We provide bulk supply for shops, retailers, and events at 
-            affordable pricing with consistent quality.
+            Cost-effective bulk supply for retailers, businesses, and events 
+            with guaranteed quality.
           </p>
         </div>
 
         <div className="service-card">
-          <h3>🚚 Fast Delivery</h3>
+          <h3>Fast Delivery</h3>
           <p>
-            Get your favorite snacks delivered quickly and safely to your 
-            doorstep with our reliable delivery service.
+            Quick and reliable delivery ensuring freshness and secure packaging.
           </p>
         </div>
 
         <div className="service-card">
-          <h3>🏪 Retail & Wholesale Supply</h3>
+          <h3>Wholesale Supply</h3>
           <p>
-            We supply our products to local stores and businesses, ensuring 
-            fresh stock and timely delivery.
+            Regular supply to shops and distributors with consistent availability.
           </p>
         </div>
 
         <div className="service-card">
-          <h3>🎉 Custom Orders for Events</h3>
+          <h3>Custom Orders</h3>
           <p>
-            Order customized quantities for parties, functions, and events 
-            with special packaging options.
+            Flexible quantity and packaging options for events and special needs.
           </p>
         </div>
 
         <div className="service-card">
-          <h3>🌿 Quality Assurance</h3>
+          <h3>Quality Assurance</h3>
           <p>
-            We follow strict hygiene and quality checks to deliver safe and 
-            delicious snacks every time.
+            Strict hygiene standards and quality checks for every batch produced.
           </p>
         </div>
 
       </div>
 
-      {/* ⭐ Why Our Services */}
+      {/* Benefits */}
       <div className="services-benefits">
-        <h2>Why Choose Our Services?</h2>
+        <h2>Why Choose Us</h2>
 
         <ul>
-          <li>✔ Fresh & Hygienic Preparation</li>
-          <li>✔ Affordable Pricing</li>
-          <li>✔ Trusted by Customers</li>
-          <li>✔ Quick & Reliable Delivery</li>
+          <li>High-quality ingredients</li>
+          <li>Affordable pricing</li>
+          <li>Reliable service</li>
+          <li>Customer satisfaction focus</li>
         </ul>
       </div>
 
-      {/* 📞 CTA */}
+      {/* CTA */}
       <div className="services-cta">
-        <h2>Ready to Order?</h2>
-        <p>Get in touch with us and enjoy the crunch!</p>
-        <button onClick={() => showSection('contact')}>Contact Us</button>
+        <h2>Ready to Get Started?</h2>
+        <p>Contact us today and experience premium quality.</p>
+        <button onClick={() => navigate("/contact")}>
+          Contact Now
+        </button>
       </div>
 
     </section>

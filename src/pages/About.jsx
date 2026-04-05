@@ -2,75 +2,74 @@ function About() {
   return (
     <section id="about">
 
-      {/* 🌟 Header */}
+      {/* Hero */}
       <div className="about-hero">
         <h1>About CrunchKart</h1>
-        <p>Delivering Crunch, Freshness & Quality in Every Bite</p>
+        <p>Crafting Quality Snacks with Consistency and Care</p>
       </div>
 
-      {/* 🍌 Our Story */}
-      <div className="about-section">
-        <h2>Our Story</h2>
-        <p>
-          CrunchKart was founded with a simple idea — to bring the authentic taste 
-          of traditional banana chips to every home. We believe that snacks should 
-          not only be delicious but also fresh and healthy.
-        </p>
-        <p>
-          From selecting the finest raw bananas to perfectly slicing and frying them, 
-          every step is handled with care and hygiene to ensure top quality.
-        </p>
-      </div>
+      {/* Brand Intro */}
+      <div className="about-container">
 
-      {/* 🎯 Mission & Vision */}
-      <div className="about-mv">
-
-        <div className="mv-box">
-          <h3>🎯 Our Mission</h3>
+        <div className="about-card">
+          <h2>Who We Are</h2>
           <p>
-            To provide high-quality, hygienic, and tasty banana chips that bring 
-            joy and satisfaction to every customer.
+            CrunchKart is a growing snack brand focused on delivering high-quality 
+            banana chips with consistent taste and freshness. We combine traditional 
+            preparation methods with modern hygiene standards to ensure every product 
+            meets premium expectations.
           </p>
         </div>
 
-        <div className="mv-box">
-          <h3>🚀 Our Vision</h3>
+        <div className="about-card">
+          <h2>Our Products</h2>
           <p>
-            To become a trusted and leading brand in the snack industry, known for 
-            quality, innovation, and customer happiness.
+            Our range includes classic salted chips, spicy variants, and customized 
+            flavors. Each product is prepared using carefully selected bananas and 
+            processed to maintain natural taste and crisp texture.
+          </p>
+        </div>
+
+        <div className="about-card">
+          <h2>Our Approach</h2>
+          <p>
+            From sourcing raw materials to final packaging, every stage is handled 
+            with strict quality control. We focus on consistency, hygiene, and 
+            customer satisfaction in every batch we produce.
           </p>
         </div>
 
       </div>
 
-      {/* ⭐ Why Choose Us */}
-      <div className="about-section">
-        <h2>Why Choose CrunchKart?</h2>
+      {/* Timeline */}
+      <div className="about-timeline">
+        <h2>Our Journey</h2>
 
-        <ul className="about-list">
-          <li>✔ Premium Quality Bananas</li>
-          <li>✔ 100% Hygienic Preparation</li>
-          <li>✔ No Artificial Preservatives</li>
-          <li>✔ Freshly Prepared Daily</li>
-          <li>✔ Affordable & Delicious</li>
-        </ul>
+        <div className="timeline">
+          <div className="timeline-item">
+            <span>2024</span>
+            <p>Brand concept and product research initiated.</p>
+          </div>
+
+          <div className="timeline-item">
+            <span>2025</span>
+            <p>Production started with focus on quality and local distribution.</p>
+          </div>
+
+          <div className="timeline-item">
+            <span>2026</span>
+            <p>Expansion into online platform and wider customer reach.</p>
+          </div>
+        </div>
       </div>
 
-      {/* 🏭 Process */}
-      <div className="about-section">
-        <h2>Our Process</h2>
-        <p>
-          We follow a clean and efficient process — from sourcing fresh bananas 
-          directly from farms to carefully slicing and frying them using high-quality oil. 
-          Each batch is tested to ensure crispiness and taste before reaching you.
-        </p>
-      </div>
-
-      {/* 📞 CTA */}
+      {/* CTA */}
       <div className="about-cta">
-        <h2>Experience the Crunch!</h2>
-        <p>Try our delicious banana chips today.</p>
-        <button onClick={() => showSection('products')}>View Products</button>
+        <h2>Experience the Quality</h2>
+        <p>Explore our products and discover the perfect crunch.</p>
+        <button onClick={() => window.location.href="/products"}>
+          View Products
+        </button>
       </div>
 
     </section>

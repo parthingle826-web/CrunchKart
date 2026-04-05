@@ -1,13 +1,14 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar.jsx"; // ✅ ADD
-
+import Footer from "./components/Footer";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
 import Products from "./pages/Products.jsx";
 import Services from "./pages/Services.jsx";
 import Contact from "./pages/Contact.jsx";
 import Cart from "./components/Cart.jsx";
-
+import Checkout from "./pages/Checkout";
+import Success from "./pages/Success";
 function AppRouter() {
   return (
     <Router>
@@ -19,7 +20,10 @@ function AppRouter() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
+       <Route path="/checkout" element={<Checkout />} />
+<Route path="/success" element={<Success />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

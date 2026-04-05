@@ -1,81 +1,93 @@
-<img src="/bananawafer.jpg" alt="Banana Chips" />;
+import { useNavigate } from "react-router-dom";
+
 function Home() {
+  const navigate = useNavigate();
+
   return (
     <section id="home">
-      {/* 🌟 Hero Section */}
+
+      {/* Hero Section */}
       <div className="hero">
-        {/* LEFT SIDE */}
+
+        {/* LEFT */}
         <div className="hero-text">
-          <h1>Welcome to CrunchKart</h1>
-          <p>Fresh • Crispy • Delicious Banana Chips</p>
+          <h1>CrunchKart</h1>
+          <h2>Premium Banana Chips</h2>
 
           <p>
-            Experience the authentic taste of premium banana wafers made from
-            handpicked bananas. Perfect crunch in every bite!
+            Experience high-quality banana chips crafted from carefully selected 
+            fresh bananas. We ensure consistency, hygiene, and superior taste 
+            in every batch, delivering a perfect balance of crunch and flavor.
           </p>
 
-          <button>Shop Now</button>
+          <button onClick={() => navigate("/products")}>
+            Shop Now
+          </button>
         </div>
 
-        {/* RIGHT SIDE */}
+        {/* RIGHT (LOGO FOCUS) */}
         <div className="hero-image">
-          <img src="/BananaWafer.jpg" alt="Banana Chips" />
+          <img src="/logo3.png" alt="CrunchKart Logo" />
         </div>
+
       </div>
 
-      {/* 🍌 About Preview */}
+      {/* About Preview */}
       <div className="home-about">
-        <h2>Why CrunchKart?</h2>
+        <h2>Why Choose CrunchKart</h2>
         <p>
-          At CrunchKart, we bring you the finest quality banana chips made from
-          carefully selected fresh bananas. Our wafers are hygienically
-          prepared, perfectly sliced, and fried to golden perfection.
+          We focus on premium ingredients, precise preparation, and strict quality 
+          standards to deliver a reliable snacking experience. Our products are 
+          designed to meet modern expectations while preserving authentic taste.
         </p>
       </div>
 
-      {/* ⭐ Features */}
+      {/* Features */}
       <div className="features">
         <div className="feature-box">
-          <h3>🌿 100% Natural</h3>
-          <p>No preservatives, just pure banana goodness.</p>
+          <h3>Premium Quality</h3>
+          <p>Carefully selected bananas for superior taste.</p>
         </div>
 
         <div className="feature-box">
-          <h3>🔥 Freshly Made</h3>
-          <p>Prepared daily for maximum freshness.</p>
+          <h3>Fresh Production</h3>
+          <p>Prepared regularly to ensure freshness.</p>
         </div>
 
         <div className="feature-box">
-          <h3>🚚 Fast Delivery</h3>
-          <p>Quick delivery to your doorstep.</p>
+          <h3>Reliable Delivery</h3>
+          <p>Quick and safe delivery service.</p>
         </div>
       </div>
 
-      {/* 🛒 Products Preview */}
+      {/* Products Preview */}
       <div className="home-products">
-        <h2>Our Popular Products</h2>
+        <h2>Popular Products</h2>
 
         <div className="product-card">
-          <h3>Classic Salted Chips</h3>
-          <p>Perfectly salted crispy banana wafers.</p>
+          <h3>Classic Salted</h3>
+          <p>Balanced flavor with perfect crispiness.</p>
         </div>
 
         <div className="product-card">
-          <h3>Spicy Masala Chips</h3>
-          <p>A spicy twist for bold snack lovers.</p>
+          <h3>Spicy Masala</h3>
+          <p>Bold spices for a rich taste experience.</p>
         </div>
 
         <div className="product-card">
-          <h3>Sweet Banana Chips</h3>
-          <p>Lightly sweetened delight.</p>
+          <h3>Sweet Chips</h3>
+          <p>Light sweetness with crunchy texture.</p>
         </div>
       </div>
 
-      {/* 📞 CTA */}
+      {/* CTA */}
       <div className="cta">
-        <h2>Craving Something Crunchy?</h2>
-        <button>Contact Us</button>
+        <h2>Discover the Perfect Crunch</h2>
+        <button onClick={() => navigate("/contact")}>
+          Contact Us
+        </button>
       </div>
+
     </section>
   );
 }
