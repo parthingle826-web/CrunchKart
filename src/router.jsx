@@ -1,5 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar.jsx"; // ✅ ADD
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar.jsx";
 import Footer from "./components/Footer";
 import Home from "./pages/Home.jsx";
 import About from "./pages/About.jsx";
@@ -9,10 +9,11 @@ import Contact from "./pages/Contact.jsx";
 import Cart from "./components/Cart.jsx";
 import Checkout from "./pages/Checkout";
 import Success from "./pages/Success";
+
 function AppRouter() {
   return (
     <Router>
-      <Navbar /> {/* ✅ MOVE HERE */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,12 +21,11 @@ function AppRouter() {
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cart" element={<Cart />} />
-       <Route path="/checkout" element={<Checkout />} />
-<Route path="/success" element={<Success />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/success" element={<Success />} />
       </Routes>
-      <Footer/>
+      <Footer />
     </Router>
   );
 }
-
 export default AppRouter;

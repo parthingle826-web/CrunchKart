@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-
+import logo from "../assets/logo3.png";
 function Home() {
   const navigate = useNavigate();
 
@@ -27,7 +27,7 @@ function Home() {
 
         {/* RIGHT (LOGO FOCUS) */}
         <div className="hero-image">
-          <img src="/logo3.png" alt="CrunchKart Logo" />
+        <img src={logo} alt="logo" />
         </div>
 
       </div>

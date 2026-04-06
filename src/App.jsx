@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import AppRouter from "./router.jsx";
 import { startAnimation } from "./animation.js";
 import Navbar from "./components/Navbar.jsx"; // ✅ ADD
+import logo from "./assets/logo3.png";   // ✅ CORRECT
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -18,7 +19,7 @@ function App() {
         <div className="splash-screen">
           <canvas id="stars"></canvas>
           <div className="logo-container">
-            <img src="/logo3.png" alt="Brand Logo" className="logo" />
+          <img src={logo} alt="Brand Logo" className="logo" />
             <h1 className="brand-name">CrunchKart</h1>
           </div>
         </div>

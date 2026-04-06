@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 function About() {
   return (
     <section id="about">
@@ -22,6 +25,8 @@ function About() {
         </div>
 
         <div className="about-card">
+         
+
           <h2>Our Products</h2>
           <p>
             Our range includes classic salted chips, spicy variants, and customized 
@@ -64,13 +69,15 @@ function About() {
       </div>
 
       {/* CTA */}
-      <div className="about-cta">
-        <h2>Experience the Quality</h2>
-        <p>Explore our products and discover the perfect crunch.</p>
-        <button onClick={() => window.location.href="/products"}>
-          View Products
-        </button>
-      </div>
+     <div className="about-cta">
+  <h2>Experience the Quality</h2>
+  <p>Explore our products and discover the perfect crunch.</p>
+
+  <Link to="/products">
+    <button>View Products</button>
+  </Link>
+
+</div>
 
     </section>
   );

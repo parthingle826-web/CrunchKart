@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaInstagram, FaTelegram, FaEnvelope } from "react-icons/fa";
+import logo from "../assets/logo3.png";
 
 function Footer() {
   return (
@@ -9,7 +10,7 @@ function Footer() {
 
         {/* 🔹 LEFT - BRAND */}
         <div className="footer-brand">
-          <img src="/logo3.png" alt="logo" className="footer-logo" />
+          <img src={logo} className="footer-logo" alt="logo" />
           <h2>CrunchKart</h2>
           <p>Fresh • Crispy • Delicious Banana Chips</p>
           <br /><p>Jaimala Nagar Lane No.01 Near SP Classes,Old Sangvi,Pune,411005.</p>
