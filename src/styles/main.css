@@ -1370,77 +1370,39 @@ button:hover {
   transform: scale(1.1);
 }
 
-/* Desktop: links visible, hamburger hidden */
+/* Desktop: show links, hide hamburger */
 .nav-links {
-  display: flex;
-  list-style: none;
+  display: flex;          /* links visible */
   gap: 25px;
 }
 
-.nav-links li a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 .menu-icon {
-  display: none; /* hidden on desktop */
-  font-size: 28px;
-  cursor: pointer;
+  display: none;          /* hamburger hidden on desktop */
 }
 
-/* Mobile: show hamburger, hide links by default */
+/* Mobile: hide links by default, show hamburger */
 @media (max-width: 768px) {
   .menu-icon {
-    display: block; /* hamburger visible */
+    display: block;       /* show hamburger */
   }
 
   .nav-links {
-    display: none;  /* hide links by default */
+    display: none;        /* hide links by default */
     flex-direction: column;
-    gap: 20px;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    background-color: var(--secondary);
-    padding: 20px 0;
-    text-align: center;
-    z-index: 999;
-  }
-
-  /* Show links when hamburger clicked */
-  .nav-links.active {
-    display: flex;
-  }
-}
-
-@media (max-width: 768px) {
-
-  /* Show hamburger */
-  .menu-icon {
-    display: block;
-  }
-
-  /* Hide links by default */
-  .nav-links {
-    display: none;            /* hidden initially */
-    flex-direction: column;
-    gap: 15px;
-    position: absolute;       /* dropdown below navbar */
-    top: 60px;                /* adjust to navbar height */
-    right: 10px;              /* align to right */
+    position: absolute;   /* dropdown below navbar */
+    top: 60px;            /* adjust to navbar height */
+    right: 10px;
     background-color: var(--secondary);
     padding: 15px 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    gap: 15px;
     z-index: 999;
   }
 
-  /* Show links when active */
   .nav-links.active {
-    display: flex;
+    display: flex;        /* show menu when hamburger clicked */
   }
+}
 
   /* Style links */
   .nav-links li a {
