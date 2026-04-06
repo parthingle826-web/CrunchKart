@@ -1,7 +1,7 @@
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { useEffect } from "react";
-
+import logo from "../assets/logo3.png";
 function Success() {
   const { state } = useLocation();
 
@@ -65,7 +65,7 @@ function Success() {
         </p>
 
         {/* LOGO */}
-        <img src="/logo3.png" className="receipt-logo" alt="logo" />
+        <img src={logo} className="receipt-logo" alt="logo" />
 
         {/* USER DETAILS */}
         <div className="receipt-box">
