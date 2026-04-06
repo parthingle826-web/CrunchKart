@@ -32,12 +32,11 @@ function Footer() {
         <div className="footer-contact">
           <h3>Connect</h3>
 
-          <div className="social-icons">
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaTelegram /></a>
-            <a href="#"><FaEnvelope /></a>
-          </div>
-
+        <div className="social-icons">
+  <a href="#" className="insta"><FaInstagram /></a>
+  <a href="#" className="telegram"><FaTelegram /></a>
+  <a href="#" className="email"><FaEnvelope /></a>
+</div>
           
         </div>
 
