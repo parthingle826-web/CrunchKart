@@ -1372,39 +1372,54 @@ button:hover {
 
 /* Desktop: show links, hide hamburger */
 .nav-links {
-  display: flex;          /* links visible */
+  display: flex; /* horizontal links */
   gap: 25px;
 }
 
 .menu-icon {
-  display: none;          /* hamburger hidden on desktop */
+  display: none; /* hide hamburger on desktop */
 }
 
-/* Mobile: hide links by default, show hamburger */
+/* Mobile */
 @media (max-width: 768px) {
   .menu-icon {
-    display: block;       /* show hamburger */
+    display: block; /* show hamburger on mobile */
+    font-size: 28px;
+    cursor: pointer;
   }
 
+  /* Links hidden by default */
   .nav-links {
-    display: none;        /* hide links by default */
+    display: none;        /* hidden initially */
     flex-direction: column;
-    position: absolute;   /* dropdown below navbar */
-    top: 60px;            /* adjust to navbar height */
+    position: absolute;   /* dropdown under navbar */
+    top: 60px;            /* navbar height */
     right: 10px;
     background-color: var(--secondary);
-    padding: 15px 20px;
     border-radius: 8px;
+    padding: 10px 20px;
     gap: 15px;
     z-index: 999;
   }
 
+  /* Show links when hamburger clicked */
   .nav-links.active {
-    display: flex;        /* show menu when hamburger clicked */
+    display: flex; /* dropdown appears */
+  }
+
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+  }
+
+  .nav-links li a:hover {
+    color: #ffcc00;
   }
 }
 
-  /* Style links */
+  Style links
   .nav-links li a {
     color: white;
     text-decoration: none;
@@ -1415,4 +1430,4 @@ button:hover {
 
   .nav-links li a:hover {
     color: #ffcc00;
-  }
+  } 

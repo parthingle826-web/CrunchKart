@@ -1,23 +1,25 @@
 import { Link } from "react-router-dom";
-import logo from "../assets/logo3.png";   // ✅ ADD THIS
+import logo from "../assets/logo3.png";
 import { useState } from "react";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
   return (
     <nav className="navbar">
       <div className="nav-left">
-        {/* <img src="../assets/logo3.png" className="nav-logo" alt="logo" />  */}
-         {/* <h2 className="brand-name">CrunchKart</h2> */}
-           <img src={logo} className="nav-logo" alt="logo" />
-
+        <img src={logo} alt="logo" className="nav-logo" />
       </div>
-{/* Hamburger Icon */}
-    <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
+
+      {/* Hamburger */}
+      <div
+        className="menu-icon"
+        onClick={() => setMenuOpen(!menuOpen)}
+      >
         ☰
       </div>
 
-      {/* Nav links */}
+      {/* Links */}
       <ul className={`nav-links ${menuOpen ? "active" : ""}`}>
         <li><Link to="/" onClick={() => setMenuOpen(false)}>Home</Link></li>
         <li><Link to="/about" onClick={() => setMenuOpen(false)}>About</Link></li>
@@ -29,7 +31,5 @@ function Navbar() {
     </nav>
   );
 }
-
-
 
 export default Navbar;
