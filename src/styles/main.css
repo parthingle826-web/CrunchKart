@@ -1414,3 +1414,44 @@ button:hover {
     display: flex;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide links by default */
+  .nav-links {
+    display: none;            /* hidden initially */
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;       /* dropdown below navbar */
+    top: 60px;                /* adjust to navbar height */
+    right: 10px;              /* align to right */
+    background-color: var(--secondary);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  /* Show links when active */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Style links */
+  .nav-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    padding: 5px 0;
+  }
+
+  .nav-links li a:hover {
+    color: #ffcc00;
+  }
+}
