@@ -377,11 +377,21 @@ button:hover {
   padding: 40px 20px 20px;
 }
 
+/* MAIN CONTAINER FIX */
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;     /* ✅ center all sections */
+  align-items: flex-start;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 80px;                   /* ✅ equal spacing between sections */
+  text-align: center;          /* ✅ center text */
+}
+
+/* EACH SECTION */
+.footer-brand,
+.footer-links,
+.footer-contact {
+  min-width: 220px;
 }
 
 /* BRAND */
@@ -404,13 +414,13 @@ button:hover {
   font-size: 14px;
 }
 
-/* LINKS */
+/* HEADINGS */
 .footer-links h3,
 .footer-contact h3 {
   margin-bottom: 15px;
-  align-items:flex-start;
 }
 
+/* LINKS */
 .footer-links a {
   display: block;
   text-decoration: none;
@@ -420,12 +430,13 @@ button:hover {
 }
 
 .footer-links a:hover {
-  color: #0f5922;
+  color: #ffb703;   /* 🔥 better matching color */
 }
 
 /* SOCIAL */
 .social-icons {
   display: flex;
+  justify-content: center;   /* ✅ center icons */
   gap: 15px;
   margin-bottom: 10px;
 }
@@ -433,8 +444,7 @@ button:hover {
 .social-icons a {
   font-size: 20px;
   color: #ccc;
-  transition: 1s;
-  align-content: normal;
+  transition: 0.3s;
 }
 
 .social-icons a:hover {
@@ -598,11 +608,7 @@ button:hover {
 .cta button:hover {
   transform: scale(1.1);
 }
-
 /* ===== ABOUT PAGE ===== */
-
-/* ===== ABOUT PAGE ===== */
-
 #about {
   padding: 60px 8%;
   background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
