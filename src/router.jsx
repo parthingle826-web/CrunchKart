@@ -10,9 +10,12 @@ import Cart from "./components/Cart.jsx";
 import Checkout from "./pages/Checkout";
 import Success from "./pages/Success";
 
+import ScrollToTop from "./components/ScrollToTop";
+
 function AppRouter() {
   return (
     <Router>
+      <ScrollToTop /> 
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />

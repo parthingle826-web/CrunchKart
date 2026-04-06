@@ -1369,3 +1369,45 @@ button:hover {
 .social-icons a:hover {
   transform: scale(1.1);
 }
+
+/* Navbar links (desktop default) */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+/* Hamburger hidden on desktop */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+
+  /* Show hamburger */
+  .menu-icon {
+    display: block;
+  }
+
+  /* Hide desktop links by default */
+  .nav-links {
+    display: none; /* hide links */
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background-color: var(--secondary);
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  /* Show links when menu open */
+  .nav-links.active {
+    display: flex;
+  }
+}
