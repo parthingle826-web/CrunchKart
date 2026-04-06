@@ -5,8 +5,8 @@ function Navbar() {
     <nav className="navbar">
       <div className="nav-left">
         <img src="/logo3.png" className="nav-logo" alt="logo" /> {/* ✅ */}
-         <h2 className="brand-name">CrunchKart</h2>
-        
+         {/* <h2 className="brand-name">CrunchKart</h2> */}
+            
      
       </div>
 
