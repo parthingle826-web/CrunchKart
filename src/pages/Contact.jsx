@@ -38,7 +38,7 @@ function Contact() {
         <div className="contact-info">
           <h2>Contact Information</h2>
 
-          <p><strong>Email:</strong> crunchkart@gmail.com</p>
+          <p><strong>Email:</strong> crunchkart01@gmail.com</p>
           <p><strong>Phone:</strong> +91 6263579995</p>
           <p>
             <strong>Location:</strong><br />
