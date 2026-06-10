@@ -7,6 +7,7 @@ import Products from "./pages/Products.jsx";
 import Services from "./pages/Services.jsx";
 import Contact from "./pages/Contact.jsx";
 import Cart from "./components/Cart.jsx";
+
 import Checkout from "./pages/Checkout";
 import Success from "./pages/Success";
 

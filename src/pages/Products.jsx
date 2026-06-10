@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext,useState } from "react";
 import { CartContext } from "../context/CartContext.jsx";
 import { useNavigate } from "react-router-dom";
 
@@ -21,7 +21,7 @@ import img15 from "../assets/products/wafers.jpg";
 
 function Products() {
   const { cart, setCart } = useContext(CartContext);
-
+  const [addedProduct, setAddedProduct] = useState(null);
  const products = [
   { id: 1, name: "Classic Banana Chips", price: 100, discount: 20, img: img1 },
   { id: 2, name: "Balaji Wafer Special", price: 120, discount: 15, img: img2 },
@@ -47,17 +47,27 @@ const buyNow = (product) => {
 };
 
 
-  const addToCart = (product) => {
-    const exist = cart.find(item => item.id === product.id);
+const addToCart = (product) => {
+  const exist = cart.find(item => item.id === product.id);
 
-    if (exist) {
-      setCart(cart.map(item =>
-        item.id === product.id ? { ...item, qty: item.qty + 1 } : item
-      ));
-    } else {
-      setCart([...cart, { ...product, qty: 1 }]);
-    }
-  };
+  if (exist) {
+    setCart(
+      cart.map(item =>
+        item.id === product.id
+          ? { ...item, qty: item.qty + 1 }
+          : item
+      )
+    );
+  } else {
+    setCart([...cart, { ...product, qty: 1 }]);
+  }
+
+  setAddedProduct(product.id);
+
+  setTimeout(() => {
+    setAddedProduct(null);
+  }, 4000);
+};
 
   
 
@@ -100,9 +110,24 @@ const buyNow = (product) => {
 
               <p className="review">4.0 Rating (120 Reviews)</p>
 
-              <button onClick={() => addToCart(p)}>
-                Add to Cart
-              </button>
+            <div>
+  <button onClick={() => addToCart(p)}>
+    Add to Cart
+  </button>
+
+  {addedProduct === p.id && (
+    <div className="cart-feedback">
+      <p>✓ Added to Cart</p>
+
+      <button
+        className="view-cart-btn"
+        onClick={() => navigate("/cart")}
+      >
+        View Cart
+      </button>
+    </div>
+  )}
+</div>
 <button
   className="buy-btn"
   onClick={() =>
