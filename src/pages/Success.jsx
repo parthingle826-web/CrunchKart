@@ -1,6 +1,6 @@
 import { useLocation } from "react-router-dom";
 import emailjs from "@emailjs/browser";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import logo from "../assets/logo3.png";
 function Success() {
   const { state } = useLocation();
@@ -9,9 +9,11 @@ function Success() {
   const product = state?.product;
   const cart = state?.cart;
   const user = state?.user;
+const emailSent = useRef(false);
+useEffect(() => {
+  if (!user?.email || emailSent.current) return;
 
-  useEffect(() => {
-    if (!user) return;
+  emailSent.current = true;
 
     const orderDetails = product
       ? `${product.name} (Qty: ${user.qty})`

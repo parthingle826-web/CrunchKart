@@ -16,7 +16,7 @@ function Checkout() {
     mobile: "",
     email: "",
     address: "",
-    payment: "cod"
+    payment: ""
   });
 
   // ✅ Dynamic total calculation
@@ -71,15 +71,19 @@ function Checkout() {
             onChange={e => setUser({ ...user, address: e.target.value })}
           />
 
-          <h3>Payment Method</h3>
-
-          <select
-            onChange={e => setUser({ ...user, payment: e.target.value })}
-          >
-            <option value="cod">Cash on Delivery</option>
-            <option value="upi">UPI</option>
-            <option value="card">Credit/Debit Card</option>
-          </select>
+        
+<select
+  className="payment-select"
+  value={user.payment}
+  onChange={(e) => setUser({ ...user, payment: e.target.value })}
+>
+  <option value="" disabled>
+    Select Payment Method
+  </option>
+  <option value="upi">UPI</option>
+  <option value="cod">Cash on Delivery</option>
+  <option value="card">Credit / Debit Card</option>
+</select>
 
         </div>
 
